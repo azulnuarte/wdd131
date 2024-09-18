@@ -23,6 +23,7 @@ nav{
     padding: 10px  0 ;
     justify-content: space-around;
     grid-column:1/4;
+    
 }
 nav a{
     color: white;
