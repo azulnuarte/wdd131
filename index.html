@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Azul Nuarte</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Azul Nuarte, About me">
+    <meta name="author" content="Azul Nuarte">
+    <link rel="stylesheet" href="styles/base.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    WDD 131 | Azul Nuarte
+    <header>
+        <h1>WDD: Dynamic Web Fundamentals - Azul Nuarte</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/azul-nuarte-904334261/">LinkedIn</a>
+            <a href="https://byui.instructure.com/">I Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/24?lang=spa&id=p8#p8">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <div class="cards-container">
+            <section class="card card1">
+                <h2>About Me</h2>
+                <div class="about-section">
+                    <p>My name is Azul Nuarte, I am from Argentina, Mendoza. I am currently a BYUI student
+                         and I have a very small business. I have 3 cats and I love them like my children. I
+                          like to watch movies and series and also sing and listen to music all the time.</p>
+                    <img src="images/about.me.jpg" alt="about me image" class = "about-image" />
+                </div>
+                <h3 class="sub-title">Argentina</h3>
+                <hr>
+                <div class="country-section">
+                    <p>Argentina is a Latin American country, we have a very famous culture for tango, mate, 
+                        asado, empanadas and soccer. We also have many touristic places like Patagonia and the Iguazu Falls.</p>
+                    <img src="images/argentina.svg" alt="argentina image" class = "argentina-image" />
+                </div>
+            </section>
+        
+            <section class="card card2">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                    <li><a href="https://chatgpt.com/">ChatGPT</a></li>
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                </ul>
+            </section>
+        </div>
+        
+    </main>
+    <footer>
+        <p>
+            © <span id="currentyear"></span>
+            Azul Nuarte | Mendoza, Argentina
+        </p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
