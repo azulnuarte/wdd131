@@ -1,0 +1,21 @@
+@media screen and (min-width: 600px) {
+    nav {
+        flex-direction: row;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger in larger view */
+    }
+
+    #nav-menu {
+        display: flex; /* Show menu */
+    }
+
+    #nav-menu li {
+        margin: 0 1rem;
+    }
+
+    main {
+        grid-template-columns: repeat(3, 1fr); /* Three columns in larger view */
+    }
+}
