@@ -1,21 +1,38 @@
-@media screen and (min-width: 600px) {
+@media (min-width: 768px) {
     nav {
-        flex-direction: row;
+        display: flex; /* Mostrar el menú como flexbox en pantallas grandes */
+        justify-content: center;
+        margin-bottom: 1em;
     }
 
-    .hamburger {
-        display: none; /* Hide hamburger in larger view */
+    nav ul {
+        list-style: none;
+        padding: 0;
     }
 
-    #nav-menu {
-        display: flex; /* Show menu */
+    nav li {
+        margin: 0 1em;
     }
 
-    #nav-menu li {
-        margin: 0 1rem;
+    nav a {
+        text-decoration: none;
+        color: white;
+        padding: 0.5em;
     }
 
-    main {
-        grid-template-columns: repeat(3, 1fr); /* Three columns in larger view */
+    nav a:hover {
+        background-color: #333; /* Efecto hover */
+    }
+
+    .gallery {
+        display: grid; /* Usar grid en pantallas grandes */
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+        gap: 1em; /* Espaciado entre las imágenes */
+    }
+
+    #menuToggle {
+        display: none; /* Ocultar el botón en vista de escritorio */
     }
 }
+
+

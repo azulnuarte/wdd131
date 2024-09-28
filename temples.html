@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Album</title>
+    
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
     <script src="scripts/temples.js" defer></script>
@@ -11,9 +12,9 @@
 <body>
     <header>
         <h1>Temple Album</h1>
-        <nav>
-            <div class="hamburger" id="hamburger">&#9776;</div>
-            <ul id="nav-menu">
+        <button id="menuToggle" aria-label="Menu">☰</button>
+        <nav id="navMenu">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
                 <li><a href="#">New</a></li>
@@ -22,47 +23,53 @@
             </ul>
         </nav>
     </header>
+    
     <main>
-        <h2>Welcome to the Temple Album</h2>
-        <figure>
-            <img src="images/aba-nigeria-temple.jpg" alt="Temple 1">
-            <figcaption>Aba Nigeria Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/bengaluru-india-temple.jpg" alt="Temple 2">
-            <figcaption>Bengaluru India Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/birmingham-alabama-temple.jpg" alt="Temple 3">
-            <figcaption>Birmingham Alabama Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/freiberg-germany-temple.jpg" alt="Temple 4">
-            <figcaption>Freiberg Germany Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Madrid-Spain-Temple.jpg" alt="Temple 5">
-            <figcaption>Madrir Spain Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/mendoza-argentina-temple.jpg" alt="Temple 6">
-            <figcaption>Mendoza Argentina Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/modesto-california-temple.jpg" alt="Temple 7">
-            <figcaption>Modesto California Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/rome-italy-temple.jpg" alt="Temple 8">
-            <figcaption>Rome Italy Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="images/São-Paulo-Brazil-Temple.jpg" alt="Temple 9">
-            <figcaption>São Paulo Brazil Temple</figcaption>
-        </figure>
+        <h2>Home</h2>
+        <section class="gallery"> 
+            <figure>
+                <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bengaluru-india-temple.jpg" alt="Bengaluru India Temple">
+                <figcaption>Bengaluru India Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/birmingham-alabama-temple.jpg" alt="Birmingham Alabama Temple">
+                <figcaption>Birmingham Alabama Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/freiberg-germany-temple.jpg" alt="Freiberg Germany Temple">
+                <figcaption>Freiberg Germany Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/madrid-spain-temple.jpg" alt="Madrid Spain Temple">
+                <figcaption>Madrid Spain Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mendoza-argentina-temple.jpg" alt="Mendoza Argentina Temple">
+                <figcaption>Mendoza Argentina Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/modesto-california-temple.jpg" alt="Modesto California Temple">
+                <figcaption>Modesto California Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rome-italy-temple.jpg" alt="Rome Italy Temple">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/São-Paulo-Brazil-Temple.jpg" alt="São Paulo Brazil Temple">
+                <figcaption>São Paulo Brazil Temple</figcaption>
+            </figure>
+        </section>  
     </main>
+    
     <footer>
-        <p>&copy; <span id="year"></span> Your Name. Last modified: <span id="last-modified"></span></p>
+        <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+        <p>Last modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
+
