@@ -1,35 +1,36 @@
 header {
-    background-color: #4CAF50; /* Cambia por tu color preferido */
+    background-color: #a15397; 
     color: white;
     padding: 1em;
     
 }
 
 h2 {
-    text-align: center; /* Centra el texto del encabezado */
+    text-align: center; 
 }
 
 nav {
-    display: flex; /* Usar flexbox para el menú */
-    justify-content:right; /* Centra los enlaces horizontalmente */
+    display: flex;
+    justify-content:right; 
 }
 
 nav ul {
-    list-style: none; /* Eliminar las viñetas de la lista */
-    padding: 0; /* Eliminar el padding */
-    margin: 0; /* Eliminar el margin */
-    display: flex; /* Mostrar los elementos de la lista en línea */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
 }
 
 nav li {
-    margin: 0 1em; /* Espaciado entre los enlaces */
+    margin: 0 1em; 
 }
 
 nav a {
-    text-decoration: none; /* Eliminar subrayado */
-    color: white; /* Cambia el color según tus preferencias */
+    text-decoration: none; 
+    color: white; 
 }
 .gallery img {
-    max-width: 100%; /* Asegura que la imagen no sobrepase el contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
+    max-width: 100%; 
+    height: auto; 
 }
+
