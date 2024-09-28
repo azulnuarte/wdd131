@@ -1,36 +1,177 @@
-header {
-    background-color: #a15397; 
-    color: white;
-    padding: 1em;
-    
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: left;
+	font-family: times, serif;
+	font-size: 1.5rem;
+	margin-left: 1rem;
 }
 
 h2 {
-    text-align: center; 
+	font-size: 1.2rem;
+	color: rgb(0, 0, 0);
+	text-align: left;
+	margin: 1rem;
 }
 
 nav {
-    display: flex;
-    justify-content:right; 
+	max-width: 700px;
+	margin: 1rem auto;
 }
 
-nav ul {
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
-    display: flex; 
+/* small view navigation */
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+	position: absolute; /* Cambiado a absolute */
+	top: 10px; /* Ajusta según sea necesario */
+	right: 10px; /* Ajusta según sea necesario */
 }
 
-nav li {
-    margin: 0 1em; 
+#menu::before {
+	content: "☰";
 }
 
-nav a {
-    text-decoration: none; 
-    color: white; 
+#menu.open::before {
+	content: "X";
 }
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: #47b1ee;
+	color: #fff;
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+.navigation a:hover {
+	background-color: #bbb;
+	color: #77b9ee;
+	font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
+
+
+.stuff {
+	margin: .5m;
+	border: 1px solid rgba(0,0,0,.1);
+	background-color: #bed;
+	max-width: 580px;
+	height: 100vh;
+}
+
 .gallery img {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+    width: 80%; /* Ajusta el ancho de las imágenes a un 80% del contenedor */
+    margin: 0 auto; /* Centra las imágenes dentro del contenedor */
+    display: block; /* Asegura que el margen funcione correctamente */
+}
+
+figure {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  figcaption {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+footer {
+    background-color:#47b1ee;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: añade sombra para destacar el cuadro */
+}
+  
+footer p {
+    margin: 5px 0;
+}
+
+
+header {
+    background-color: #47b1ee; /* Cambia el color azul si lo deseas */
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  header h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center; /* Centra los links horizontalmente */
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: #ffffff;; /* Efecto hover */
+  }
+  
+
+
+
+/* large view navigation ************************************/
+@media (min-width: 37.5em) {
+	h1 {
+		font-size: 2.5rem;
+		margin-left: 0;
+		text-align: center;
+	}
+	
+	h2 {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	#menu {
+		display: none; /* hide hamburger button */
+	}
+
+	.navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+	
+	.stuff {
+		margin: 1rem auto;
+	}
 }
 
