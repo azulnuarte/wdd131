@@ -1,0 +1,84 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    background-image: none;
+    flex-direction: column;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Ajusta el tamaño máximo de la imagen en móvil */
+}
+
+.data, .weather {
+    width: 100%; /* Ocupan todo el ancho en móvil */
+    margin-bottom: 20px; /* Espacio entre bloques */
+}
+
+
+header h1 {
+    text-align: center; /* Centrar el título en móvil */
+}
+
+/* Media queries para escritorio */
+@media (min-width: 768px) {
+    body {
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        background-color: #000; /* Fondo oscuro para la imagen */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    /* Imagen de fondo a pantalla completa */
+    .image img {
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Coloca la imagen detrás del contenido */
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+    }
+
+    .data, .weather {
+        width: 45%; /* Cuadros más pequeños a los lados */
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+footer{
+    padding:30px;
+}
