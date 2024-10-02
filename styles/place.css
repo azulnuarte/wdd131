@@ -1,84 +1,102 @@
 /* Estilos generales */
-body {
+.ody {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
 }
 
-.container {
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    background-image: none;
-    flex-direction: column;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px; /* Espacio debajo de la imagen */
-}
-
-.image-container img {
+/* Imagen de fondo */
+.image {
+    position: absolute; /* Posición absoluta para ocupar todo el espacio */
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-width: 300px; /* Ajusta el tamaño máximo de la imagen en móvil */
+    height: 100%;
+    z-index: -1; /* Envía la imagen al fondo */
 }
 
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+/* Estilos del contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    position: relative; /* Para que los cuadros se posicionen sobre la imagen */
+    color: white; /* Cambiamos el color del texto a blanco */
+    text-align: center;
+}
+
+/* Título en el centro */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos del contenido */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho de los cuadros */
+    padding: 20px;
+    flex-direction: row; /* Alinea los elementos en fila */
+}
+
+/* Estilos de los cuadros */
 .data, .weather {
-    width: 100%; /* Ocupan todo el ancho en móvil */
-    margin-bottom: 20px; /* Espacio entre bloques */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%; /* Tamaño de los cuadros */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
 }
 
-
-header h1 {
-    text-align: center; /* Centrar el título en móvil */
+/* Estilos de los títulos de los cuadros */
+.data h2, .weather h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-/* Media queries para escritorio */
-@media (min-width: 768px) {
-    body {
-        height: 100vh;
-        margin: 0;
-        overflow: hidden;
-        background-color: #000; /* Fondo oscuro para la imagen */
-    }
+/* Listas dentro de los cuadros */
+.data ul, .weather ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
+.data ul li, .weather ul li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
 
-    /* Imagen de fondo a pantalla completa */
-    .image img {
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1; /* Coloca la imagen detrás del contenido */
+/* Estilos específicos para pantallas grandes */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 4rem;
     }
 
     .content {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        max-width: 1200px;
-        padding: 20px;
+        flex-direction: row; /* Alinea los elementos en fila */
     }
 
     .data, .weather {
-        width: 45%; /* Cuadros más pequeños a los lados */
-        background-color: rgba(255, 255, 255, 0.8);
+        width: 45%; /* Tamaño de los cuadros */
     }
-}
 
-footer{
-    padding:30px;
+    /* Footer */
+    footer {
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo del footer */
+        color: white; /* Color del texto del footer */
+        padding: 10px; /* Espaciado interno */
+        position: relative; /* Asegúrate de que el footer esté en el flujo normal del documento */
+        width: 100%; /* Para que el footer ocupe todo el ancho */
+        text-align: center; /* Centra el texto */
+        margin-top: 20px; /* Espacio encima del footer */
+    }
 }
