@@ -1,0 +1,11 @@
+.hero img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: If you want to use object-fit */
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+}

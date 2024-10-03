@@ -1,102 +1,66 @@
-/* Estilos generales */
-.ody {
+* {
+    box-sizing: border-box; /* Incluye padding y borde en el ancho y alto total */
+    margin: 0; /* Elimina los márgenes predeterminados */
+}
+
+body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Imagen de fondo */
-.image {
-    position: absolute; /* Posición absoluta para ocupar todo el espacio */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Envía la imagen al fondo */
-}
-
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
-}
-
-/* Estilos del contenedor principal */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    position: relative; /* Para que los cuadros se posicionen sobre la imagen */
-    color: white; /* Cambiamos el color del texto a blanco */
+header {
+    position: relative;
     text-align: center;
+    background-color: rgb(248, 213, 167);
 }
 
-/* Título en el centro */
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-/* Estilos del contenido */
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Limita el ancho de los cuadros */
+header h1 {
+    color: black;
+    margin: 0;
     padding: 20px;
-    flex-direction: row; /* Alinea los elementos en fila */
 }
 
-/* Estilos de los cuadros */
 .data, .weather {
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
-    border-radius: 10px;
+    position: absolute;
+    top: 20%; /* Ajusta a la posición deseada desde la parte superior del header */
+    left: 5%; /* Posiciona el data a la izquierda */
+    background-color: rgb(248, 213, 167, 0.5);
+    color: rgb(0, 0, 0);
     padding: 20px;
-    width: 45%; /* Tamaño de los cuadros */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    border-radius: 8px;
+    width: 30%; /* Ancho fijo para el data */
 }
 
-/* Estilos de los títulos de los cuadros */
-.data h2, .weather h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.weather {
+    right: 5%; /* Posiciona el weather a la derecha */
+    left: auto; /* Asegúrate de que left esté en auto para no interferir */
+    width: 30%; /* Ancho fijo para el weather */
+    top:70%;
 }
 
-/* Listas dentro de los cuadros */
-.data ul, .weather ul {
-    list-style-type: none;
-    padding: 0;
+footer {
+    background-color:  rgb(248, 213, 167);
+    color: rgb(0, 0, 0); /* Color del texto */
+    text-align: center; /* Centra el texto del footer */
+    padding: 10px; /* Espaciado interno */
 }
 
-.data ul li, .weather ul li {
-    font-size: 1.2rem;
-    margin: 5px 0;
+img {
+    max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
 }
 
-/* Estilos específicos para pantallas grandes */
-@media (min-width: 1024px) {
-    h1 {
-        font-size: 4rem;
-    }
-
-    .content {
-        flex-direction: row; /* Alinea los elementos en fila */
-    }
-
+/* Media queries para pantallas pequeñas */
+@media (max-width: 550px) {
     .data, .weather {
-        width: 45%; /* Tamaño de los cuadros */
-    }
-
-    /* Footer */
-    footer {
-        background-color: rgba(0, 0, 0, 0.7); /* Fondo del footer */
-        color: white; /* Color del texto del footer */
-        padding: 10px; /* Espaciado interno */
-        position: relative; /* Asegúrate de que el footer esté en el flujo normal del documento */
-        width: 100%; /* Para que el footer ocupe todo el ancho */
-        text-align: center; /* Centra el texto */
-        margin-top: 20px; /* Espacio encima del footer */
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: 10px; /* Añade un margen para separarlos */
+        width: 90%; /* Ancho completo para pantallas pequeñas */
+        padding: 10px; /* Ajusta el padding si es necesario */
     }
 }
+
+  
