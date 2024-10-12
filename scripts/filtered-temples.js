@@ -88,7 +88,7 @@ function createTempleCards(templeArray) {
     });
 }
 
-createTempleCards(temples); // Crea las tarjetas de templos al cargar la página
+createTempleCards(temples); 
 
 function filterTemples(filterType) {
     let filteredTemples;
@@ -110,9 +110,11 @@ function filterTemples(filterType) {
             filteredTemples = temples;
             break;
     }
-    createTempleCards(filteredTemples); // Crea las tarjetas filtradas
+    createTempleCards(filteredTemples); 
 }
 
-// Mostrar año y fecha de la última modificación en el pie de página
+
 document.getElementById("year").innerText = new Date().getFullYear();
 document.getElementById("last-modified").innerText = document.lastModified;
+
+

@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #C7A252;
-    color: rgb(49, 48, 48);
+    color: #8B4513;
     padding: 10px 0;
     text-align: center;
 }
@@ -58,8 +58,8 @@ header nav button:hover {
     color: #A0522D; /* Beige oscuro */
 }
 footer {
-    background-color: #C7A252; /* Mismo color de fondo que el header */
-    color: rgb(49, 48, 48); /* Mismo color de texto que el header */
+    background-color: #C7A252; 
+    color:#8B4513;
     padding: 10px 0;
     text-align: center;
 }
