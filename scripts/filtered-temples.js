@@ -47,6 +47,13 @@ const temples = [
       dedicated: "1983, December, 2",
       area: 116642,
       imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+    {
+        templeName: "Mendoza Argentina Temple",
+        location: "Ciudad de Mendoza, Mendoza",
+        dedicated: "2024, September, 22",
+        area:  21.999,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/mendoza-argentina-temple/mendoza-argentina-temple-51736.jpg"
     }
 ];
 
@@ -82,3 +89,9 @@ function displayTemples(filteredTemples) {
 
 // Mostrar todos los templos al cargar la página
 displayTemples(temples);
+
+// Función para actualizar el año actual en el footer
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Función para mostrar la fecha de la última modificación
+document.getElementById('lastModified').textContent = document.lastModified;
