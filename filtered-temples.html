@@ -12,19 +12,17 @@
 <body>
     <header>
         <h1>Temple Album</h1>
-        <nav class="navigation">
-            <a href="#" title="Home">Home</a>
-            <a href="#" title="Old">Old</a>
-            <a href="#" title="New">New</a>
-            <a href="#" title="Large">Large</a>
-            <a href="#" title="Small">Small</a>
+        <nav>
+            <button onclick="filterTemples('old')">Old</button>
+            <button onclick="filterTemples('new')">New</button>
+            <button onclick="filterTemples('large')">Large</button>
+            <button onclick="filterTemples('small')">Small</button>
+            <button onclick="filterTemples('home')">Home</button>
         </nav>
     </header>
     
-    <main>
-        <h2>Home</h2>
-        <div class="gallery" id="temple-container"></div> 
-    </main>
+    <main id="temple-cards-container"></main>
+
     
     <footer>
         <p>&copy; <span id="currentYear"></span> Azul Nuarte ❤ Argentina ❤</p>

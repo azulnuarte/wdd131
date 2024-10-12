@@ -48,46 +48,71 @@ const temples = [
       area: 116642,
       imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    
-    
+    {
+        templeName: "Orlando Florida",
+        location: "Orlando, Florida, United States",
+        dedicated: "1994, June, 11",
+        area: 70000,
+        imageUrl: "images/orlando-florida-temple.jpg"
+    },
+    {
+        templeName: "Rome Italy",
+        location: "Rome, Italy",
+        dedicated: "2019, March, 10",
+        area: 32000,
+        imageUrl: "images/rome-italy-temple.jpg"
+    },
+    {
+        templeName: "Houston Texas",
+        location: "Houston, Texas, United States",
+        dedicated: "2000, December, 19",
+        area: 92000,
+        imageUrl: "images/houston-texas-temple.jpg"
+    }
 ];
 
-function displayTemples(filteredTemples) {
-    const gallery = document.querySelector('.gallery');
-    gallery.innerHTML = ''; // Limpiar la galería antes de agregar los templos
-
-    filteredTemples.forEach(temple => {
-        const templeCard = document.createElement('figure');
-        
-        const img = document.createElement('img');
-        img.src = temple.imageUrl;
-        img.alt = `${temple.templeName}`;
-        img.loading = 'lazy';
-        
-
-        const caption = document.createElement('figcaption');
-        caption.textContent = temple.templeName;
-
-        const details = document.createElement('div');
-        details.classList.add('temple-details');
-        details.innerHTML = `
-            <p><span>Location:</span> ${temple.location}</p>
-            <p><span>Dedicated:</span> ${temple.dedicated}</p>
-            <p><span>Size:</span> ${temple.area} sq ft</p>
+function createTempleCards(templeArray) {
+    const container = document.getElementById("temple-cards-container");
+    container.innerHTML = ""; // Limpiar el contenedor
+    templeArray.forEach(temple => {
+        const card = document.createElement("div");
+        card.classList.add("temple-card");
+        card.innerHTML = `
+            <h2>${temple.templeName}</h2>
+            <p>${temple.location}</p>
+            <p>Dedicated: ${temple.dedicated}</p>
+            <p>Area: ${temple.area} sq ft</p>
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
         `;
-
-        templeCard.appendChild(caption);
-        templeCard.appendChild(img);
-        templeCard.appendChild(details);
-        gallery.appendChild(templeCard);
+        container.appendChild(card);
     });
 }
 
-// Mostrar todos los templos al cargar la página
-displayTemples(temples);
+createTempleCards(temples); // Crea las tarjetas de templos al cargar la página
 
-// Función para actualizar el año actual en el footer
-document.getElementById('currentYear').textContent = new Date().getFullYear();
+function filterTemples(filterType) {
+    let filteredTemples;
+    switch (filterType) {
+        case 'old':
+            filteredTemples = temples.filter(temple => new Date(temple.dedicated.split(", ")[0]) < new Date('1900-01-01'));
+            break;
+        case 'new':
+            filteredTemples = temples.filter(temple => new Date(temple.dedicated.split(", ")[0]) > new Date('2000-01-01'));
+            break;
+        case 'large':
+            filteredTemples = temples.filter(temple => temple.area > 90000);
+            break;
+        case 'small':
+            filteredTemples = temples.filter(temple => temple.area < 10000);
+            break;
+        case 'home':
+        default:
+            filteredTemples = temples;
+            break;
+    }
+    createTempleCards(filteredTemples); // Crea las tarjetas filtradas
+}
 
-// Función para mostrar la fecha de la última modificación
-document.getElementById('lastModified').textContent = document.lastModified;
+// Mostrar año y fecha de la última modificación en el pie de página
+document.getElementById("year").innerText = new Date().getFullYear();
+document.getElementById("last-modified").innerText = document.lastModified;
