@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of LDS temples from around the world displayed in a picture gallery.">
+    <meta name="author" content="Azul Nuarte">
+    <title>Temple Album</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <button onclick="filterTemples('old')">Old</button>
+            <button onclick="filterTemples('new')">New</button>
+            <button onclick="filterTemples('large')">Large</button>
+            <button onclick="filterTemples('small')">Small</button>
+            <button onclick="filterTemples('home')">Home</button>
+        </nav>
+    </header>
+    
+    <main id="temple-cards-container"></main>
+
+    
+    <footer>
+        <p>&copy; <span id="year"></span>. Last modified: <span id="last-modified"></span>. Student: Azul Nuarte ❤️</p>
+    </footer>
+</body>
+</html>
+
+
+

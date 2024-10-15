@@ -1,3 +1,4 @@
+
 // Función para manejar el menú hamburguesa
 document.getElementById('menuToggle').addEventListener('click', function() {
     const navMenu = document.getElementById('navMenu');
