@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            margin: 0 0 20px;
+            text-align: center;
+        }
+        input[type="text"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .task {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .task:last-child {
+            border-bottom: none;
+        }
+        .delete {
+            background-color: #dc3545;
+        }
+        .delete:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <input type="text" id="taskInput" placeholder="Escribe una tarea..." />
+        <select id="categorySelect">
+            <option value="Personal">Personal</option>
+            <option value="Trabajo">Trabajo</option>
+            <option value="Estudio">Estudio</option>
+        </select>
+        <button id="addTaskBtn">Agregar Tarea</button>
+        <div id="taskList"></div>
+    </div>
+
+    <script>
+        const taskInput = document.getElementById('taskInput');
+        const categorySelect = document.getElementById('categorySelect');
+        const addTaskBtn = document.getElementById('addTaskBtn');
+        const taskList = document.getElementById('taskList');
+
+        // Cargar tareas guardadas al iniciar
+        document.addEventListener('DOMContentLoaded', loadTasks);
+
+        addTaskBtn.addEventListener('click', addTask);
+
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            const category = categorySelect.value;
+
+            if (taskText === '') {
+                alert('Por favor, ingresa una tarea.');
+                return;
+            }
+
+            const task = {
+                text: taskText,
+                category: category,
+                id: Date.now() // Usar la fecha como identificador único
+            };
+
+            // Agregar tarea a la lista
+            createTaskElement(task);
+            saveTask(task);
+
+            taskInput.value = ''; // Limpiar el campo de entrada
+        }
+
+        function createTaskElement(task) {
+            const taskDiv = document.createElement('div');
+            taskDiv.classList.add('task');
+            taskDiv.innerHTML = `
+                <span>${task.text} - <em>${task.category}</em></span>
+                <button class="delete" onclick="deleteTask(${task.id})">Eliminar</button>
+            `;
+            taskList.appendChild(taskDiv);
+        }
+
+        function saveTask(task) {
+            const tasks = getTasksFromStorage();
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function loadTasks() {
+            const tasks = getTasksFromStorage();
+            tasks.forEach(task => createTaskElement(task));
+        }
+
+        function getTasksFromStorage() {
+            return JSON.parse(localStorage.getItem('tasks')) || [];
+        }
+
+        function deleteTask(id) {
+            let tasks = getTasksFromStorage();
+            tasks = tasks.filter(task => task.id !== id);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            loadTasks(); // Recargar tareas después de eliminar
+        }
+    </script>
+</body>
+</html>
