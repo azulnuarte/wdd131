@@ -3,112 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temporizador Pomodoro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .temporizador {
-            text-align: center;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            margin: 0 0 20px;
-        }
-        #reloj {
-            font-size: 48px;
-            margin: 20px 0;
-        }
-        button {
-            padding: 10px 15px;
-            margin: 5px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #28a745;
-            color: white;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        button:disabled {
-            background-color: #ccc;
-        }
-    </style>
+    <title> Pomodoro</title>
+    <link rel="stylesheet" href="styles/pomodoro.css">
+    <script src="scripts/pomodoro.js" defer></script>
+
 </head>
 <body>
-    <div class="temporizador">
-        <h1>Temporizador Pomodoro</h1>
-        <div id="reloj">25:00</div>
-        <button id="iniciarBtn">Iniciar</button>
-        <button id="detenerBtn" disabled>Detener</button>
-        <button id="reiniciarBtn" disabled>Reiniciar</button>
+    <header class="header">
+        <h1>FlowFlow</h1>>
+      <!--The trick is create a checkbox with a label, add display:none property to checkbox and modify styles with the pseudoclass :checked-->
+        <input type="checkbox" name="Menu" id="menu-button-check">
+        <label for="menu-button-check">≡</label>
+        <div class="menu">
+            <ul>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="to-do-list.html">To-do</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="pomodoro.html">Pomodoro</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="bg">
     </div>
+    <div class="temporizador">
+        <h2>Pomodoro Timer </h2>
+        <div id="reloj">25:00</div>
+        <button id="iniciarBtn">Start</button>
+        <button id="detenerBtn" disabled>Stop</button>
+        <button id="reiniciarBtn" disabled>Restart</button>
+    </div>
+    <footer>
+        <p>© Azul Nuarte | FocusFlow</p>
+    </footer>
 
-    <script>
-        let tiempoPomodoro = 25 * 60; // 25 minutos en segundos
-        let tiempoDescanso = 5 * 60; // 5 minutos en segundos
-        let temporizador;
-        let enDescanso = false;
 
-        const reloj = document.getElementById('reloj');
-        const iniciarBtn = document.getElementById('iniciarBtn');
-        const detenerBtn = document.getElementById('detenerBtn');
-        const reiniciarBtn = document.getElementById('reiniciarBtn');
-
-        function actualizarReloj() {
-            const minutos = Math.floor(tiempoPomodoro / 60);
-            const segundos = tiempoPomodoro % 60;
-            reloj.textContent = `${minutos < 10 ? '0' : ''}${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
-        }
-
-        function iniciarTemporizador() {
-            iniciarBtn.disabled = true;
-            detenerBtn.disabled = false;
-            reiniciarBtn.disabled = true;
-
-            temporizador = setInterval(() => {
-                if (tiempoPomodoro > 0) {
-                    tiempoPomodoro--;
-                } else {
-                    clearInterval(temporizador);
-                    enDescanso = !enDescanso;
-                    tiempoPomodoro = enDescanso ? tiempoDescanso : 25 * 60; // 5 minutos de descanso o reiniciar el Pomodoro
-                    alert(enDescanso ? "¡Descanso de 5 minutos!" : "¡Tiempo de trabajo de 25 minutos listo!");
-                }
-                actualizarReloj();
-            }, 1000);
-        }
-
-        function detenerTemporizador() {
-            clearInterval(temporizador);
-            iniciarBtn.disabled = false;
-            detenerBtn.disabled = true;
-            reiniciarBtn.disabled = false;
-        }
-
-        function reiniciarTemporizador() {
-            detenerTemporizador();
-            tiempoPomodoro = 25 * 60; // Reiniciar a 25 minutos
-            actualizarReloj();
-            reiniciarBtn.disabled = true;
-        }
-
-        iniciarBtn.addEventListener('click', iniciarTemporizador);
-        detenerBtn.addEventListener('click', detenerTemporizador);
-        reiniciarBtn.addEventListener('click', reiniciarTemporizador);
-
-        actualizarReloj(); // Llamar a la función una vez para mostrar el reloj inicialmente
-    </script>
 </body>
 </html>

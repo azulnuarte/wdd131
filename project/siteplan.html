@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A site designed to help people to be organized">
-    <meta name="author" content="Azul Nuarte">
     <title>FocusFlow</title>
     <link rel="stylesheet" href="styles/siteplan.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body>
-    <header>
-        <h1>FocusFlow</h1>
-        <button id="menuToggle" aria-label="Menu"></button>
-        <button id="menu"></button>
-        <nav class="navigation">
-            <a href="#" title="Home">Home</a>
-            <a href="calendar.html" title="Calendar" class="active">Calendar</a>
-            <a href="pomodoro.html" title="Pomodoro">Pomodoro</a>
-            <a href="to-do-list.html" title="To do">To do</a>
-            <a href="resources.html" title="Resources">Resources</a>
-        </nav>
-    </header>
+    
 
-    <main>
-        <h2>Home</h2>
+<body>
+<header class="header">
+   <h1>FocusFlow </h1>
+    <input type="checkbox" name="Menu" id="menu-button-check">
+    <label for="menu-button-check">≡</label>
+    <div class="menu">
+        <ul>
+            <li><a href="siteplan.html">Home</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="to-do-list.html">To-do</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="pomodoro.html">Pomodoro</a></li>
+        </ul>
+    </div>
+ </header>
+ <div class="bg">
+ </div>
+ <main>
+    <h2>Home</h2>
         <section class="hero">
-            
             <figure>
                 <img src="images/productivity-2.webp" alt="Productivity on work">
             </figure>
-        
         </section>
         <p class="quote">"You do not rise to the level of your goals. You fall to the level of your systems." — James Clear</p>
 
-        
+        <h3>Welcome to FocusFlow</h3>
+        <div class="card">
+            <p>
+                This page will help you create and achieve your goals successfully. Here, you'll find 
+                effective tools and strategies to plan your time, prioritize your tasks, and balance your
+                personal, professional, and academic commitments. With our guidance, you’ll be able to 
+                organize your day, overcome procrastination, and take the necessary steps to reach your 
+                objectives.
+            </p>
+        </div>
+        <div class="cta-button">
+            <a href="to-do-list.html">
+                <button class="hamburger-button">Start Here</button>
+            </a>
+        </div>
     </main>
 
     <footer>
@@ -45,3 +58,5 @@
 </body>
 
 </html>
+ </main>
+</body>

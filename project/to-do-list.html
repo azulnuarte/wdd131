@@ -1,145 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            width: 400px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-        h1 {
-            margin: 0 0 20px;
-            text-align: center;
-        }
-        input[type="text"], select {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .task {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .task:last-child {
-            border-bottom: none;
-        }
-        .delete {
-            background-color: #dc3545;
-        }
-        .delete:hover {
-            background-color: #c82333;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Lista de Tareas</h1>
-        <input type="text" id="taskInput" placeholder="Escribe una tarea..." />
-        <select id="categorySelect">
-            <option value="Personal">Personal</option>
-            <option value="Trabajo">Trabajo</option>
-            <option value="Estudio">Estudio</option>
-        </select>
-        <button id="addTaskBtn">Agregar Tarea</button>
-        <div id="taskList"></div>
-    </div>
-
-    <script>
-        const taskInput = document.getElementById('taskInput');
-        const categorySelect = document.getElementById('categorySelect');
-        const addTaskBtn = document.getElementById('addTaskBtn');
-        const taskList = document.getElementById('taskList');
-
-        // Cargar tareas guardadas al iniciar
-        document.addEventListener('DOMContentLoaded', loadTasks);
-
-        addTaskBtn.addEventListener('click', addTask);
-
-        function addTask() {
-            const taskText = taskInput.value.trim();
-            const category = categorySelect.value;
-
-            if (taskText === '') {
-                alert('Por favor, ingresa una tarea.');
-                return;
-            }
-
-            const task = {
-                text: taskText,
-                category: category,
-                id: Date.now() // Usar la fecha como identificador único
-            };
-
-            // Agregar tarea a la lista
-            createTaskElement(task);
-            saveTask(task);
-
-            taskInput.value = ''; // Limpiar el campo de entrada
-        }
-
-        function createTaskElement(task) {
-            const taskDiv = document.createElement('div');
-            taskDiv.classList.add('task');
-            taskDiv.innerHTML = `
-                <span>${task.text} - <em>${task.category}</em></span>
-                <button class="delete" onclick="deleteTask(${task.id})">Eliminar</button>
-            `;
-            taskList.appendChild(taskDiv);
-        }
-
-        function saveTask(task) {
-            const tasks = getTasksFromStorage();
-            tasks.push(task);
-            localStorage.setItem('tasks', JSON.stringify(tasks));
-        }
-
-        function loadTasks() {
-            const tasks = getTasksFromStorage();
-            tasks.forEach(task => createTaskElement(task));
-        }
-
-        function getTasksFromStorage() {
-            return JSON.parse(localStorage.getItem('tasks')) || [];
-        }
-
-        function deleteTask(id) {
-            let tasks = getTasksFromStorage();
-            tasks = tasks.filter(task => task.id !== id);
-            localStorage.setItem('tasks', JSON.stringify(tasks));
-            loadTasks(); // Recargar tareas después de eliminar
-        }
-    </script>
-</body>
+    <head>
+        <link rel="stylesheet" href="styles/to-do-list.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHq6xxlTTlmwUsKbb5eW7E2L9KkXCdR7VcVJb6uYglKdxkWZWnZTVf6Og5sWUJf7j7rLdzCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="scripts/to-do-lis.js" defer></script>
+        <title>To do List</title>
+    </head>
+    <header class="header">
+      <h1>FocusFlow</h1>
+      <input type="checkbox" name="Menu" id="menu-button-check">
+      <label for="menu-button-check">≡</label>
+      <div class="menu">
+          <ul>
+              <li><a href="siteplan.html">Home</a></li>
+              <li><a href="calendar.html">Calendar</a></li>
+              <li><a href="to-do-list.html">To-do</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="pomodoro.html">Pomodoro</a></li>
+              
+          </ul>
+      </div>
+  </header>
+  
+      
+    <body>
+      <h2>To do list</h2>
+        <div class="relative z-10 container mx-auto p-4">
+          <p class="text-l text-center text-white mb-5" style="padding-top: 50px; color: #385263;">
+            Enter today's plan in paragraph format and generate a to-do list.
+        </p>
+        
+        </div>
+        <div class="relative z-10 flex justify-center">
+          <div class="px-2 w-full max-w-2xl">
+            <div class="flex flex-col items-start rounded p-5">
+              <textarea class="shadow flex-grow rounded p-2 mr-2 bg-white text-black w-full" id="messageInput" placeholder="Enter your plan for the day in paragraph format" style="min-height: 150px; padding: 15px;">Today I need to wake up at 7 AM and I'll go for a run, at 8 AM eat breakfast then at 9 AM head to a meeting. At 11:30 AM, I'll spend some time working on my project until 1 PM and then take a lunch break and at 5 PM wrap up work. Later in the evening at 7 PM, Binge that new Netflix show.</textarea><br>
+              <button class="pill-button bg-gray-900 text-white mt-5" id="generateButton">
+                <i class="fas fa-list-check mr-2"></i> Generate Schedule
+              </button>
+            </div>
+            <div id="scheduleContainer" class="mt-5 p-5 bg-white rounded text-black">
+              <div id="titleBar" class="header-bar text-white" style="font-size: 16px;">
+                <i class="fas fa-calendar-check"></i> ‎ Your Schedule for Today
+              </div>
+              <div id="scheduleOutput"></div>
+            </div>
+          </div>
+        </div>
+      <footer>
+          <p>© Azul Nuarte | FocusFlow</p>
+      </footer>
+    </body>
 </html>
