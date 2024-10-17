@@ -1,0 +1,228 @@
+       
+body
+{
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+@media (max-width: 768px) {
+        #menu
+        {
+            background-color: #fff;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            border-radius: 50%;
+            transition: .5s ease-in-out;
+        }
+
+        #menu span
+        {
+            display: block;
+            width: 30px;
+            height: 5px;
+            background-color: rgb(14, 12, 12);
+            margin: auto;
+            margin-top: 22.5px;
+            position: relative;
+            transition: .2s linear;
+        }
+
+        #menu span::before,
+        span::after
+        {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(14, 12, 12);
+            position: absolute;
+        }
+
+        #menu span::before
+        {
+            top: -10px;
+        }
+
+        #menu span::after
+        {
+            bottom: -10px;
+        }
+
+        #navigation
+        {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 250px;
+            height: 250px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 5px 8px rgb(182, 174, 174);
+            display: none;
+            
+        }
+
+        #navigation ul
+        {
+            width: 50%;
+            margin: auto;
+        }
+
+        #navigation ul li
+        {
+            list-style: none;
+            padding: 8px;
+            color: rgb(98, 134, 109);
+            transition: .2s linear;
+        }
+
+        #navigation ul li:hover
+        {
+            cursor: pointer;
+            transform: scale(1.1);
+            color: black;
+        }
+
+        #menu:hover
+        {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
+        }
+
+        #menu:hover span
+        {
+            transform: scale(.7);
+        }
+
+        .active
+        {
+            background-color: #fff;
+        }
+
+        .active div #menu span
+        {
+            transform: rotate(180deg);
+        }
+
+        .active div #menu span::before
+        {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .active div #menu span::after
+        {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        .active div #navigation
+        {
+            display: flex;
+        }
+        footer{
+            background-color: #4E5B31;
+            color:white;
+            text-align: center;
+            padding:10px;
+            
+          }
+        .header {
+            display: flex;
+            align-items: center;
+            background: #4E5B31;
+            width: 100%;
+            margin-bottom: 20px; /* Ajusta según sea necesario */
+            /* position: relative; */ /* Puedes dejar esta línea fuera o agregarla */
+          }
+          
+          
+        h1 {
+            color: white;
+            display: inline-block;
+            font-family:Arial, Helvetica, sans-serif;
+            letter-spacing: 0.5em;
+            margin: 0.25em 0 0.25em 1em;
+            
+          }  
+          h2{
+            text-align: center;
+            color:#4E5B31
+          }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em; /* Reducir aún más el tamaño del título */
+            }
+        
+            .quote {
+                font-size: 0.9em; /* Ajustar el tamaño de la cita */
+            }
+        
+        .card {
+            padding: 10px; /* Ajustar el padding */
+        }
+            
+         #navigation {
+            width: 100%; /* Hacer que el menú ocupe todo el ancho */
+            height: auto; /* Ajustar automáticamente la altura */
+        }
+        
+        .cta-button {
+            margin: 10px 0; /* Espaciado alrededor del botón */
+        }
+        }                
+        .logo-container {
+            width: 150px; /* Ajusta el tamaño según sea necesario */
+            height: 150px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .card {
+            background-color: rgba(111, 133, 99, 0.8); /* Blanco con un 80% de opacidad */
+            border: 1px solid #323b2f;                     /* Borde de la tarjeta */
+            border-radius: 8px;                         /* Bordes redondeados */
+            padding: 20px;                              /* Espaciado interno */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   /* Sombra para darle profundidad */
+            max-width: 600px;                           /* Ancho máximo de la tarjeta */
+            margin: 20px auto;                          /* Centrar la tarjeta en la página */
+            font-family: Arial, sans-serif;             /* Fuente del texto */
+        }
+        
+        /* Estilo del texto dentro de la tarjeta */
+        .card p {
+            font-size: 16px;                            /* Tamaño de la fuente */
+            line-height: 1.5;                           /* Espaciado entre líneas */
+            color: #0f1a0f;                                /* Color oscuro para asegurar legibilidad */
+        }
+        
+        .cta-button {
+            text-align: center;
+            margin: 40px 0;
+        }
+        figure img {
+            width: auto;
+            height: 300px;
+            border-radius: 10px;
+            align-items: center;
+            margin-left: 500px;
+        }
+        
+        .quote {
+            text-align: center;
+            color: #4E5B31;
+        }
+        
