@@ -1,89 +1,89 @@
-body {
+body { 
     font-family: 'Montserrat', sans-serif;
     background-color: #C2C5AA; 
 }
 
 .header {
-   background-color: #582F0E; 
-   padding: 20px;
-   border: 1px solid #414833; 
+    background-color: #C2C5AA; 
+    padding: 20px;
+    border: 1px solid #414833; 
 }
 
 h1 {
-   color: #C2C5AA; 
-   text-align: center;
-   font-family: 'Impact', sans-serif;
+    color: #333D29; 
+    text-align: center;
+    font-family: 'Impact', sans-serif;
 }
 
 .header ul {
-   list-style-type: none;
-   display: flex;
-   justify-content: center;
-   padding: 0;
-   margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 .header ul li {
-   margin: 0 10px;
+    margin: 0 10px;
 }
 
 .header a {
-   text-decoration: none;
-   color: #7F4F24; 
-   padding: 10px 15px;
-   display: inline-block;
+    text-decoration: none;
+    color: #7F4F24; 
+    padding: 10px 15px;
+    display: inline-block;
 }
 
 .cards-container {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 10px;
-   padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
 }
 
 .cards-container div {
-   width: calc(50% - 10px);
-   border: 1px solid #414833; 
-   padding: 20px;
-   box-sizing: border-box;
-   background-color: #A68A64; 
-   margin: 0; 
+    width: calc(50% - 10px);
+    border: 1px solid #414833; 
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #A4AC86; 
+    margin: 0; 
 }
 
 h2 {
-   color: #333D29; 
-   text-align: center;
-   font-family: 'Impact', sans-serif;
+    color: #333D29; 
+    text-align: center;
+    font-family: 'Impact', sans-serif;
 }
 
 p {
-   color: #333D29; 
+    color: #333D29; 
 }
 
 .card5 {
-   background-color: #A68A64; 
-   padding: 20px;
-   border: 1px solid #414833; 
-   margin-bottom: 10px;
-   max-width: 1255px;
-   margin-left: 10px;
+    background-color: #A4AC86; 
+    padding: 20px;
+    border: 1px solid #414833; 
+    margin-bottom: 10px;
+    max-width: 1255px;
+    margin-left: 10px;
 }
 
 footer {
-   background-color: #582F0E; 
-   padding: 20px;
-   border: 1px solid #414833; 
-   text-align: center;
+    background-color: #C2C5AA; 
+    padding: 20px;
+    border: 1px solid #414833; 
+    text-align: center;
 }
 
 .wireframe {
-   margin-top: 40px;
+    margin-top: 40px;
 }
 
 .wireframe-container {
-   border: 2px dashed #414833; 
-   padding: 20px;
-   margin-bottom: 20px;
+    border: 2px dashed #414833; 
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .header-wireframe,
@@ -91,104 +91,104 @@ footer {
 .main-content-wireframe,
 .footer-wireframe,
 .pomodoro-timer-card {
-   background-color: #e0e0e0; 
-   border: 1px solid #aaa;
-   padding: 10px;
-   margin: 10px 0;
-   text-align: center;
+    background-color: #e0e0e0; 
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .welcome-card,
 .info-box {
-   background-color: #e0e0e0; 
-   border: 1px solid #aaa; 
-   padding: 80px;
-   margin: 10px;
-   width: 100%; 
+    background-color: #e0e0e0; 
+    border: 1px solid #aaa; 
+    padding: 80px;
+    margin: 10px;
+    width: 100%; 
 }
 
 .content-row {
-   display: flex;
-   justify-content: space-between;
-   margin-bottom: 20px;
-   gap: 10px; 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px; 
 }
 
 .calendar-card {
-   background-color: #e0e0e0; 
-   border: 1px solid #aaa; 
-   padding: 30px;
-   width: 49%; 
-   box-sizing: border-box; 
+    background-color: #e0e0e0; 
+    border: 1px solid #aaa; 
+    padding: 30px;
+    width: 49%; 
+    box-sizing: border-box; 
 }
 
 .todo-list-card {
-   background-color: #e0e0e0; 
-   border: 1px solid #aaa; 
-   padding: 30px;
-   width: 49%; 
-   box-sizing: border-box; 
+    background-color: #e0e0e0; 
+    border: 1px solid #aaa; 
+    padding: 30px;
+    width: 49%; 
+    box-sizing: border-box; 
 }
 
 .pomodoro-timer-card {
-   background-color: #e0e0e0; 
-   border: 1px solid #aaa; 
-   padding: 30px;
-   margin: 10px;
-   width: 97%; 
-   clear: both; 
+    background-color: #e0e0e0;
+    border: 1px solid #aaa; 
+    padding: 30px;
+    margin: 10px;
+    width: 97%; 
+    clear: both; 
 }
 
-/* Vista móvil */
+/* Mobile View */
 .wireframe-container.mobile {
-   display: flex; 
-   flex-direction: column; 
-   max-width: 400px;
-   margin-left: auto;
-   margin-right: auto;
+    display: flex; 
+    flex-direction: column; 
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-content-wireframe {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
 }
 
 h3 {
-   text-align: center;
-   font-family: 'Impact', sans-serif;
+    text-align: center;
+    font-family: 'Impact', sans-serif;
 }
 
 .card-wireframe {
-   background-color: #e0e0e0; 
-   border: 1px solid #aaa; 
-   padding: 10px;                
-   width: 100%;                  
-   max-width: 300px; 
-   align-items: center; 
-   gap: 10px; 
+    background-color: #e0e0e0; 
+    border: 1px solid #aaa; 
+    padding: 10px;                
+    width: 100%;                  
+    max-width: 300px; 
+    align-items: center; 
+    gap: 10px; 
 }
 
 .content-row {
-   display: flex;
-   justify-content: space-between;
-   width: 100%; 
-   margin-bottom: 20px;
-   gap: 10px; 
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    margin-bottom: 20px;
+    gap: 10px; 
 }
 
 .calendar-card-desktop {
-   background-color: #e0e0e0; 
-   border: 1px solid #aaa; 
-   padding: 90px;
-   width: 50%; 
-   box-sizing: border-box;
+    background-color: #e0e0e0; 
+    border: 1px solid #aaa; 
+    padding: 90px;
+    width: 50%; 
+    box-sizing: border-box;
 }
 
 .todo-list-card-desktop {
-   background-color: #e0e0e0; 
-   border: 1px solid #aaa; 
-   padding: 50px;
-   width: 50%; 
-   box-sizing: border-box; 
+    background-color: #e0e0e0; 
+    border: 1px solid #aaa; 
+    padding: 50px;
+    width: 50%; 
+    box-sizing: border-box; 
 }
