@@ -1,18 +1,18 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #C2C5AA; /* Color de fondo general */
+    background-color: #C2C5AA; 
 }
 
 .header {
-   background-color: #582F0E; /* Dark brown */
+   background-color: #582F0E; 
    padding: 20px;
-   border: 1px solid #414833; /* Dark gray for the border */
+   border: 1px solid #414833; 
 }
 
 h1 {
-   color: #C2C5AA; /* Soft green for header text */
+   color: #C2C5AA; 
    text-align: center;
- font-family: 'Papyrus', serif;
+   font-family: 'Impact', sans-serif;
 }
 
 .header ul {
@@ -29,7 +29,7 @@ h1 {
 
 .header a {
    text-decoration: none;
-   color: #7F4F24; /* Earthy color for links */
+   color: #7F4F24; 
    padding: 10px 15px;
    display: inline-block;
 }
@@ -43,36 +43,36 @@ h1 {
 
 .cards-container div {
    width: calc(50% - 10px);
-   border: 1px solid #414833; /* Dark gray for card borders */
+   border: 1px solid #414833; 
    padding: 20px;
    box-sizing: border-box;
-   background-color: #A68A64; /* Light brown for card background */
-   margin: 0; /* Sin margen adicional */
+   background-color: #A68A64; 
+   margin: 0; 
 }
 
 h2 {
-   color: #333D29; /* Dark gray for headings */
+   color: #333D29; 
    text-align: center;
- font-family: 'Papyrus', serif;
+   font-family: 'Impact', sans-serif;
 }
 
 p {
-   color: #333D29; /* Dark gray for paragraph text */
+   color: #333D29; 
 }
 
 .card5 {
-   background-color: #A68A64; /* Light brown for card */
+   background-color: #A68A64; 
    padding: 20px;
-   border: 1px solid #414833; /* Dark gray for border */
+   border: 1px solid #414833; 
    margin-bottom: 10px;
    max-width: 1255px;
    margin-left: 10px;
 }
 
 footer {
-   background-color: #582F0E; /* Dark brown for footer */
+   background-color: #582F0E; 
    padding: 20px;
-   border: 1px solid #414833; /* Dark gray for border */
+   border: 1px solid #414833; 
    text-align: center;
 }
 
@@ -81,7 +81,7 @@ footer {
 }
 
 .wireframe-container {
-   border: 2px dashed #414833; /* Dark gray for dashed border */
+   border: 2px dashed #414833; 
    padding: 20px;
    margin-bottom: 20px;
 }
@@ -91,8 +91,8 @@ footer {
 .main-content-wireframe,
 .footer-wireframe,
 .pomodoro-timer-card {
-   background-color: #e0e0e0; /* Original wireframe color */
-   border: 1px solid #aaa; /* Original border color */
+   background-color: #e0e0e0; 
+   border: 1px solid #aaa;
    padding: 10px;
    margin: 10px 0;
    text-align: center;
@@ -100,8 +100,8 @@ footer {
 
 .welcome-card,
 .info-box {
-   background-color: #e0e0e0; /* Original color for info box */
-   border: 1px solid #aaa; /* Original border color */
+   background-color: #e0e0e0; 
+   border: 1px solid #aaa; 
    padding: 80px;
    margin: 10px;
    width: 100%; 
@@ -115,24 +115,24 @@ footer {
 }
 
 .calendar-card {
-   background-color: #e0e0e0; /* Original color for calendar card */
-   border: 1px solid #aaa; /* Original border color */
+   background-color: #e0e0e0; 
+   border: 1px solid #aaa; 
    padding: 30px;
    width: 49%; 
    box-sizing: border-box; 
 }
 
 .todo-list-card {
-   background-color: #e0e0e0; /* Original color for todo list card */
-   border: 1px solid #aaa; /* Original border color */
+   background-color: #e0e0e0; 
+   border: 1px solid #aaa; 
    padding: 30px;
    width: 49%; 
    box-sizing: border-box; 
 }
 
 .pomodoro-timer-card {
-   background-color: #e0e0e0; /* Original color for pomodoro timer card */
-   border: 1px solid #aaa; /* Original border color */
+   background-color: #e0e0e0; 
+   border: 1px solid #aaa; 
    padding: 30px;
    margin: 10px;
    width: 97%; 
@@ -156,12 +156,12 @@ footer {
 
 h3 {
    text-align: center;
- font-family: 'Papyrus', serif;
+   font-family: 'Impact', sans-serif;
 }
 
 .card-wireframe {
-   background-color: #e0e0e0; /* Original color for card wireframe */
-   border: 1px solid #aaa; /* Original border color */
+   background-color: #e0e0e0; 
+   border: 1px solid #aaa; 
    padding: 10px;                
    width: 100%;                  
    max-width: 300px; 
@@ -178,16 +178,16 @@ h3 {
 }
 
 .calendar-card-desktop {
-   background-color: #e0e0e0; /* Original color for desktop calendar card */
-   border: 1px solid #aaa; /* Original border color */
+   background-color: #e0e0e0; 
+   border: 1px solid #aaa; 
    padding: 90px;
    width: 50%; 
    box-sizing: border-box;
 }
 
 .todo-list-card-desktop {
-   background-color: #e0e0e0; /* Original color for desktop todo list card */
-   border: 1px solid #aaa; /* Original border color */
+   background-color: #e0e0e0; 
+   border: 1px solid #aaa; 
    padding: 50px;
    width: 50%; 
    box-sizing: border-box; 
