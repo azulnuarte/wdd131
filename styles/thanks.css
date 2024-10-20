@@ -1,0 +1,41 @@
+/* styles/thanks.css */
+
+/*------BODY----*/ 
+body {
+    background-color: #F5EBE0;
+}
+
+/*-------HEADER------*/
+header {
+    background-color: #D5BDAF;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+h1 {
+    color: #7B5C4B;
+    text-align: center;
+}
+
+/*-------MAIN CONTAINER------*/
+.thanks-container {
+    max-width: 400px;
+    margin: 2rem auto; /* Centra el contenedor verticalmente */
+    padding: 1rem;
+    background-color: #E3D5CA; /* Fondo claro */
+    border: 1px solid #7F4F24; /* Borde oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+}
+
+/*-------FOOTER------*/
+footer {
+    background-color: #D5BDAF;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+p {
+    color: #7B5C4B;
+    text-align: center;
+}
