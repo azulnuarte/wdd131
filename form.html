@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="thanks.html" class="wf2">
+            
+            <fieldset class="form-container">
+                <fieldset>
+                    <legend>Product Name*</legend>
+                    <label for="products"></label>
+                    <select name="products" id="products" required>
+                        <option value="" disabled selected>Select a product</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="rating">
+                    <legend>Overall Rating</legend>
+                    <label><input type="radio" name="rating" value="1" required> &starf; </label>
+                    <label><input type="radio" name="rating" value="2" required> &starf;&starf; </label>
+                    <label><input type="radio" name="rating" value="3" required> &starf;&starf;&starf; </label>
+                    <label><input type="radio" name="rating" value="4" required> &starf;&starf;&starf;&starf; </label>
+                    <label><input type="radio" name="rating" value="5" required> &starf;&starf;&starf;&starf;&starf; </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Date of Installation*</legend>
+                    <label for="installationDate"></label>
+                    <input type="date" id="installationDate" name="installationDate" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Useful Features (check all that apply)</legend>
+                    <label><input type="checkbox" id="feature1" name="features" value="Feature 1"> Durability</label>
+                    <label><input type="checkbox" id="feature2" name="features" value="Feature 2"> Ease of Use</label>
+                    <label><input type="checkbox" id="feature3" name="features" value="Feature 3"> Performance</label>
+                    <label><input type="checkbox" id="feature4" name="features" value="Feature 4"> Design</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Written Review (optional)</legend>
+                    <label for="writtenReview"></label>
+                    <textarea id="writtenReview" name="writtenReview" rows="4" cols="50"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>User Name (optional)</legend>
+                    <label><input type="text" id="userName" name="userName"></label>
+                </fieldset>
+
+                <input type="submit" value="Submit Review">
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p>Azul Nuarte | Product Review</p>
+        <p id="lastModified"></p> 
+    </footer>
+    
+</body>
+
+</html>
