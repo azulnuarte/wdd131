@@ -1,0 +1,155 @@
+/*-----BODY-----*/
+body {
+  background-color: #C2C5AA;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+
+/*-----HEADER-----*/
+header {
+  padding: 20px;
+  border: 1px solid #414833; 
+}
+
+/*-----TITLES-----*/
+h1, h2 {
+  color: #333D29; 
+  text-align: center;
+  font-family: 'Impact', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+/*-----TEXT-----*/
+p {
+  color: #333D29;
+  line-height: 1.5;
+}
+
+/*-----LINKS NAV-----*/
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #7F4F24;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 5px; 
+}
+
+nav {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a:hover {
+  background-color: #936639; 
+  color: white; 
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  nav a {
+      font-size: 5px; 
+      padding: 8px 15px; 
+  }
+}
+
+/*----BOOK GALLERY-----*/
+.book-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.book-item {
+  background: #A4AC86;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+}
+
+/*-----IMAGES-----*/
+.book-image {
+  width: 100%;         /* Hace que la imagen ocupe el 100% del contenedor */
+  height: auto;        /* Mantiene la proporción de aspecto de la imagen */
+  border-radius: 10px; /* Esquinas redondeadas para las imágenes */
+}
+
+/*-----PODCAST GALLERY-----*/
+.podcast-gallery {
+  background-color: #C2C5AA; /* Mantiene la armonía con el fondo del body */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.podcast-gallery h2 {
+  color: #333D29;
+  font-family: 'Impact', sans-serif;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+}
+
+.podcast-item {
+  background: #A4AC86;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px auto;
+  padding: 20px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.podcast-item a {
+  text-decoration: none;
+  color: #7F4F24;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.podcast-item a:hover {
+  color: #936639; /* Efecto hover en el enlace */
+}
+
+.podcast-item p {
+  color: #333D29;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.podcast-item strong {
+  font-weight: bold;
+  color: #333D29;
+}
+
+@media (max-width: 600px) {
+  .podcast-item {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .podcast-item a {
+    font-size: 16px;
+  }
+}
+
+
+/*-----FOOTER-----*/
+footer {
+  background-color: #A68A64; 
+  padding: 20px;
+  border: 1px solid #414833; 
+  text-align: center;
+  margin-top: 20px;
+}

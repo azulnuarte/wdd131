@@ -1,0 +1,130 @@
+/*-----BODY-----*/ 
+body {
+  background-color: #C2C5AA; /* Soft green background */
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6; /* Slightly increased for better readability */
+}
+
+/*-----HEADER-----*/
+header {
+  padding: 20px;
+  border: 1px solid #414833; /* Dark gray border */
+  text-align: center; /* Center the header content */
+  background-color: #C2C5AA; /* Soft green */
+}
+
+/*-----TITLES-----*/
+h1, h2 {
+  color: #333D29; /* Dark gray for titles */
+  font-family: 'Impact', sans-serif;
+  letter-spacing: 0.1em;
+  margin: 10px 0; /* Added margin for spacing */
+}
+
+/*-----TEXT-----*/
+p {
+  color: #333D29; /* Dark gray for text */
+  line-height: 1.5;
+  margin: 10px 0; /* Added margin for spacing */
+}
+
+/*-----LINKS NAV-----*/
+nav {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0; /* Added margin for spacing */
+}
+
+nav a {
+  text-decoration: none;
+  color: white; /* White text for links */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #7F4F24; /* Earthy brown for buttons */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 5px; 
+}
+
+nav a:hover {
+  background-color: #936639; /* Darker brown on hover */
+  color: white; 
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  nav a {
+      font-size: 14px; /* Adjusted for better responsiveness */
+      padding: 8px 15px; 
+  }
+}
+
+/*-----BUTTON-----*/
+.start-button {
+  text-decoration: none;
+  color: white; /* White text for buttons */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #7F4F24; /* Earthy brown for buttons */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block; 
+  width: 150px; 
+  margin: 20px auto; /* Centered button with margin */
+  text-align: center;
+}
+
+.start-button:hover {
+  background-color: #936639; /* Darker brown on hover */
+  color: white; 
+}
+
+/*-----BENEFITS-----*/
+.benefits-container {
+  max-width: 800px; 
+  margin: 20px auto; /* Centered container */
+  padding: 20px; /* Added padding */
+  background-color: #A4AC86; /* Darker soft green for card backgrounds */
+  border-radius: 10px; /* Rounded corners for aesthetics */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.benefit-item {
+  margin: 10px 0; /* Added margin for spacing */
+  padding: 15px; /* Padding for better content spacing */
+  border: 1px solid #414833; /* Dark gray border for definition */
+  border-radius: 5px; /* Rounded corners */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.benefit-item svg {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.knowledge {
+  margin: 20px auto; /* Centered container */
+  padding: 20px; /* Added padding */
+  max-width: 800px; /* Consistent width */
+  background-color: #A4AC86; /* Background for better contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/*--------FOOTER------*/
+footer {
+  background-color: #A68A64; /* Light brown for footer */
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  color: #B6AD90; /* Soft beige for footer text */
+}
+
+hr {
+  color: #7F4F24;
+}

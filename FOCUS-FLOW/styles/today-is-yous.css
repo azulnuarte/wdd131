@@ -1,0 +1,194 @@
+/*-----BODY-----*/ 
+body {
+    background-color: #C2C5AA; /* Soft green */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6; /* Aumenta el espaciado entre líneas */
+    margin: 0;
+    padding: 20px; /* Agrega un padding general a todo el body */
+}
+
+/*-----HEADER-----*/
+header {
+    padding: 20px;
+    border: 1px solid #414833; /* Dark gray */
+    background-color: #C2C5AA; /* Soft green */
+    text-align: center; /* Centrar contenido en el header */
+}
+
+/*-----LINKS NAV-----*/
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; /* White */
+    padding: 10px 20px;
+    background-color: #7F4F24; /* Earthy brown */
+    border-radius: 6px;
+    margin: 0 10px; /* Espaciado horizontal entre enlaces */
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #936639; /* Darker brown */
+}
+
+/*-----HEADING STYLES-----*/
+h1,
+h2 {
+    color: #333D29; /* Dark gray */
+    text-align: center;
+    font-family: 'Impact', sans-serif;
+    margin: 20px 0; /* Espacio alrededor de los encabezados */
+}
+
+/*-----INPUTS Y BOTONES-----*/
+input,
+button {
+    width: calc(100% - 22px); /* Resta el padding y el borde */
+    padding: 10px;
+    margin-bottom: 15px; /* Aumenta el margen inferior para mayor separación */
+    border-radius: 5px;
+    border: 1px solid #414833; /* Dark gray */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+button {
+    background-color: #7F4F24; /* Earthy brown */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #936639; /* Darker brown */
+}
+
+/*-----POMODORO TIMER-----*/
+.pomodoro-timer {
+    margin: 30px auto; /* Espaciado superior e inferior, centrado horizontalmente */
+    padding: 20px;
+    background: #A4AC86; /* Darker soft green */
+    max-width: 800px; 
+    border-radius: 8px; /* Añadir borde redondeado */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+#time-display {
+    font-size: 2rem;
+    text-align: center; /* Centrar el temporizador */
+}
+
+/*-----FOOTER-----*/
+footer {
+    background-color: #A68A64; /* Light brown */
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 8px; /* Añadir borde redondeado */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+/*-----PLANNER SECTION-----*/
+.calendar {
+    border: 1px solid #414833; /* Dark gray */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #A4AC86; /* Darker soft green */
+    max-width: 800px; /* Ajusta el ancho máximo */
+    margin: 0 auto;   /* Centrar el contenedor */
+    overflow: hidden;  /* Evitar el desbordamiento */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-header button {
+    background-color: #7F4F24; /* Earthy brown */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    max-width: 5px;
+}
+
+.calendar-header button:hover {
+    background-color: #A68A64; /* Light brown */
+}
+
+.days-of-week,
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.day {
+    padding: 15px;
+    border: 1px solid #414833; /* Dark gray */
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 60px; /* Asegúrate de que haya suficiente altura para cada día */
+}
+
+.day:hover {
+    background-color: #e0e0e0;
+}
+
+.event {
+    background-color: #656D4A; /* Cambiar a un color específico si necesario */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.event:hover {
+    background-color: #C2C5AA; /* Cambiar a un color específico si necesario */
+}
+/*-----TASK PLANNER-----*/
+.task-planner {
+    max-width: 900px; /* Ancho máximo */
+    margin: 20px auto; /* Margen superior e inferior, centrado horizontalmente */
+    padding: 10px; /* Ajustar padding para contenido */
+    overflow: hidden; /* Mantener el contenido dentro del contenedor */
+}
+
+#taskList {
+    margin-top: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #414833; /* Dark gray */
+    margin-bottom: 10px; /* Aumentar margen para más separación */
+    border-radius: 5px;
+    width: 100%; /* Asegura que cada tarea ocupe el ancho completo del contenedor */
+    background-color: #A4AC86; /* Darker soft green */
+}
+
+/*-----TASK COMPLETED-----*/
+.task.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/*-----SECONDARY TEXT AND DETAILS-----*/
+.secondary-text {
+    color: #B6AD90; /* Soft beige */
+    margin: 5px 0; /* Espacio superior e inferior */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
+
+/*-----HOVER EFFECTS OR SHADOWS-----*/
+.hover-effect {
+    transition: background-color 0.3s ease;
+}
