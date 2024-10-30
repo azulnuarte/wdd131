@@ -5,12 +5,13 @@ body {
   line-height: 1.6; /* Slightly increased for better readability */
 }
 
+
 /*-----HEADER-----*/
 header {
   padding: 20px;
-  border: 1px solid #414833; /* Dark gray border */
-  text-align: center; /* Center the header content */
+  border: 1px solid #414833; /* Dark gray */
   background-color: #C2C5AA; /* Soft green */
+  text-align: center; /* Centrar contenido en el header */
 }
 
 /*-----TITLES-----*/
@@ -30,35 +31,23 @@ p {
 
 /*-----LINKS NAV-----*/
 nav {
-  justify-content: center;
   display: flex;
-  flex-wrap: wrap;
-  margin: 20px 0; /* Added margin for spacing */
+  justify-content: center;
+  margin: 20px 0; /* Margen superior e inferior */
 }
 
 nav a {
   text-decoration: none;
-  color: white; /* White text for links */
+  color: #ffffff; /* White */
   padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
+  background-color: #7F4F24; /* Earthy brown */
   border-radius: 6px;
-  background-color: #7F4F24; /* Earthy brown for buttons */
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 5px; 
+  margin: 0 10px; /* Espaciado horizontal entre enlaces */
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #936639; /* Darker brown on hover */
-  color: white; 
-  transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-  nav a {
-      font-size: 14px; /* Adjusted for better responsiveness */
-      padding: 8px 15px; 
-  }
+  background-color: #936639; /* Darker brown */
 }
 
 /*-----BUTTON-----*/

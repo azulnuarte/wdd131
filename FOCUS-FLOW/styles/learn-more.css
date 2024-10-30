@@ -8,7 +8,9 @@ body {
 /*-----HEADER-----*/
 header {
   padding: 20px;
-  border: 1px solid #414833; 
+  border: 1px solid #414833; /* Dark gray */
+  background-color: #C2C5AA; /* Soft green */
+  text-align: center; /* Centrar contenido en el header */
 }
 
 /*-----TITLES-----*/
@@ -26,37 +28,25 @@ p {
 }
 
 /*-----LINKS NAV-----*/
-nav a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 6px;
-  background-color: #7F4F24;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 5px; 
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; /* Margen superior e inferior */
 }
 
-nav {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+nav a {
+  text-decoration: none;
+  color: #ffffff; /* White */
+  padding: 10px 20px;
+  background-color: #7F4F24; /* Earthy brown */
+  border-radius: 6px;
+  margin: 0 10px; /* Espaciado horizontal entre enlaces */
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #936639; 
-  color: white; 
-  transform: translateY(-2px);
+  background-color: #936639; /* Darker brown */
 }
-
-@media (max-width: 600px) {
-  nav a {
-      font-size: 5px; 
-      padding: 8px 15px; 
-  }
-}
-
 /*----BOOK GALLERY-----*/
 .book-gallery {
   display: flex;
